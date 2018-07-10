@@ -1,7 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
 html, body {
   height: 100%;
   width: 100%;
@@ -9,4 +7,31 @@ html, body {
 
 .slds-box {
   padding: 0;
+}
+
+.slds-icon_stacked svg:first-child {
+  border: 1px solid;
+  border-radius: 2px;
+  margin-right: 8px;
+  margin-bottom: 7px;
+}
+
+.slds-icon_stacked svg:nth-child(2) {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.slds-icon_stacked svg.slds-icon_small:first-child {
+  width: 1.1rem;
+  height: 1.1rem;
+  top: 2px;
+  right: 2px;
+}
+
+.slds-icon_stacked svg.slds-icon_small:nth-child(2) {
+  width: 1rem;
+  height: 1rem;
+  bottom: 0;
+  right: 0;
 }

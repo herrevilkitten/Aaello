@@ -12,6 +12,8 @@ import { BoardComponent } from './components/board/board.component';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
+import { AlertModule } from 'ngx-bootstrap';
+
 const appRoutes: Routes = [
   {
     path: 'board/:id',
@@ -38,6 +40,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     BrowserModule,
     KanbanModule,
+    AlertModule.forRoot(),
     RouterModule.forRoot(
       appRoutes,
       {

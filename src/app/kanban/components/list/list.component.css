@@ -1,12 +1,28 @@
-.kanban-list .slds-card__body {
-  padding: 0;
+.card {
   min-width: 300px;
 }
 
-.kanban-list .slds-card__footer {
-  border: none;
+.card-header {
+  padding: 1px 6px;
 }
 
-.slds-card {
-  border-radius: 0;
+.card-body {
+  padding: 6px 0;
+  padding-bottom: 0;
 }
+
+.kanban-list-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kanban-list-title button {
+  margin-left: 1px;
+}
+
+.kanban-list-card {
+  margin-top: 6px;
+}
+
+.kanban-list-title-actions {}

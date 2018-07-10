@@ -2,12 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatListModule } from '@angular/material/list';
+import { DragulaModule } from 'ng2-dragula';
 
-import { LightningDesignModule } from '../lightning-design/lightning-design.module';
+import { ButtonsModule, ModalModule } from 'ngx-bootstrap';
 
 import { BoardComponent } from './components/board/board.component';
 import { CardComponent } from './components/card/card.component';
@@ -20,11 +17,9 @@ import { CardDetailComponent } from './components/card-detail/card-detail.compon
     CommonModule,
     FormsModule,
 
-    MatButtonModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatListModule,
-    LightningDesignModule
+    DragulaModule,
+    ButtonsModule.forRoot(),
+    ModalModule.forRoot(),
   ],
   declarations: [
     BoardComponent,

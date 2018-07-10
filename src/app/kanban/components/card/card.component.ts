@@ -1,7 +1,10 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, TemplateRef } from '@angular/core';
 
 import { Card } from '../../models/card';
 import { Task } from '../../models/task';
+
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
 @Component({
   selector: 'kanban-card',
@@ -11,8 +14,9 @@ import { Task } from '../../models/task';
 export class CardComponent implements OnInit {
   @Input() card: Card;
   @Output() delete: EventEmitter<any> = new EventEmitter();
+  modalRef: BsModalRef;
 
-  constructor() { }
+  constructor(private modalService: BsModalService) { }
 
   ngOnInit() {
   }
@@ -23,5 +27,9 @@ export class CardComponent implements OnInit {
 
   createTask() {
     this.card.tasks.push(new Task());
+  }
+
+  openDetailModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template);
   }
 }

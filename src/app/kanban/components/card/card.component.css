@@ -1,10 +1,31 @@
-.slds-card {
-  border-radius: 0;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+.card {
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
 }
 
-.slds-card__body {
+.card-body {
+  white-space: normal;
   max-height: 200px;
-  overflow: auto;
+  overflow-y: scroll;
+  padding: 6px;
+}
+
+.card-header {
+  padding: 1px 6px;
+}
+
+.kanban-card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.kanban-card-header-avatar {
+  padding: 6px;
+}
+
+.kanban-card-header-avatar img {
+  max-height: 24px;
+  max-width: 24px;
 }

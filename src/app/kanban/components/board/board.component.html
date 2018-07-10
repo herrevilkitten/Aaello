@@ -1,77 +1,19 @@
-<!--
-  <div class="kanban-board">
-  <div class="kanban-board-title">{{board.title}}</div>
-  <div class="kanban-board-content">
+<div class="card kanban-board">
+  <div class="card-header">
+    <div class="kanban-board-title">
+      <span>
+        <i class="fas fa-chalkboard"></i> {{board.title}}
+      </span>
+      <span class="float-right">
+        <button type="button" class="btn btn-light" (click)="createList()">
+          <i class="far fa-columns"></i>
+        </button>
+      </span>
+    </div>
+  </div>
+  <div class="card-body">
     <div class="kanban-board-list" *ngFor="let list of board.lists">
-      <app-list [list]="list"></app-list>
-    </div>
-    <div class="kanban-board-list" (click)="createList()">
-      Add a new list...
+      <kanban-list [list]="list" (delete)="deleteList($event)"></kanban-list>
     </div>
   </div>
 </div>
--->
-<!--
-<mat-card class="kanban-board">
-  <mat-card-title>{{board.title}}</mat-card-title>
-  <mat-card-content>
-    <div class="kanban-board-content">
-      <app-list *ngFor="let list of board.lists" [list]="list"></app-list>
-      <button mat-button (click)="createList()">
-        Add a new list...
-      </button>
-    </div>
-  </mat-card-content>
-</mat-card>
--->
-<!--
-<div class="kanban-board">
-  <div class="kanban-title">{{board.title}}</div>
-  <div class="slds-grid slds-wrap kanban-content">
-    <div class="slds-col" *ngFor="let list of board.lists">
-      <app-list [list]="list"></app-list>
-    </div>
-    <div class="slds-col">
-      <button class="slds-button slds-button_neutral" (click)="createList()">
-        <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
-          <use xlink:href="/assets/icons/action-sprite/svg/symbols.svg#add_relationship"></use>
-        </svg>Add a list...</button>
-    </div>
-  </div>
-</div>
--->
-
-<article class="slds-card kanban-board">
-  <div class="slds-card__header slds-grid">
-    <header class="slds-media slds-media_center slds-has-flexi-truncate">
-      <div class="slds-media__figure">
-        <span class="slds-icon_container slds-icon-utility-builder" [title]="board.title">
-          <svg class="slds-icon slds-icon_small slds-icon-text-default" aria-hidden="true">
-            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#builder"></use>
-          </svg>
-          <span class="slds-assistive-text">{{board.title}}</span>
-        </span>
-      </div>
-      <div class="slds-media__body">
-        <h2 class="slds-card__header-title">
-          <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" [title]="board.title">
-            <span class="slds-text-heading_small">{{board.title}}</span>
-          </a>
-        </h2>
-      </div>
-      <div class="slds-no-flex">
-        <button class="slds-button slds-button_neutral" (click)="createList()">
-          <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
-            <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#add"></use>
-          </svg>List</button>
-      </div>
-    </header>
-  </div>
-  <div class="slds-card__body slds-card__body_inner slds-scrollable">
-    <div class="slds-grid">
-      <div class="slds-col" *ngFor="let list of board.lists">
-        <kanban-list [list]="list" (delete)="deleteList($event)"></kanban-list>
-      </div>
-    </div>
-  </div>
-</article>

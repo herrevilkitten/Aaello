@@ -1,25 +1,39 @@
 .kanban-board {
   height: 100%;
+  width: 100%;
+}
+
+.kanban-board .card-body {
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.kanban-board-list {
+  display: inline-block;
+  max-width: 400px;
+  min-width: 300px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.kanban-board-list:first-child {
+  margin-left: 0;
+}
+
+.kanban-board-list:last-child {
+  margin-right: 0;
+}
+
+.card-header {
+  padding: 1px 6px;
+}
+
+.card-body {
+  padding: 6px;
 }
 
 .kanban-board-title {
-  font-size: 2em;
-}
-
-.kanban-board-content {
-  /*
-  display: grid;
-  grid-gap: 5px;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  */
-}
-
-.kanban-board-list {}
-
-.kanban-board button[mat-button] {
-  flex-grow: 0;
-}
-
-.slds-card__body {
-  height: calc(100% - 75px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
