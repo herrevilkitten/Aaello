@@ -1,0 +1,11 @@
+<div class="slds-accordion__summary">
+  <h3 class="slds-text-heading_small slds-accordion__summary-heading">
+    <button (click)="toggleAccordion(this)" aria-controls="accordion-details-01" aria-expanded="true" class="slds-button slds-button_reset slds-accordion__summary-action">
+      <svg class="slds-accordion__summary-action-icon slds-button__icon slds-button__icon_left" aria-hidden="true">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#switch" />
+      </svg>
+      <ng-content></ng-content>
+    </button>
+  </h3>
+  <ng-content select="button"></ng-content>
+</div>

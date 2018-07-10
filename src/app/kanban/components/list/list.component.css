@@ -1,0 +1,12 @@
+.kanban-list .slds-card__body {
+  padding: 0;
+  min-width: 300px;
+}
+
+.kanban-list .slds-card__footer {
+  border: none;
+}
+
+.slds-card {
+  border-radius: 0;
+}

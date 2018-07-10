@@ -1,0 +1,11 @@
+<div class="slds-form-element">
+  <label class="slds-checkbox_toggle slds-grid">
+    <span class="slds-form-element__label slds-m-bottom_none">{{label}}</span>
+    <input #ldCheckboxToggle type="checkbox" [name]="id" [value]="value" [attr.aria-describedby]="id" [attr.checked]="checked ? 'checked' : null" [attr.disabled]="disabled ? 'disabled' : null" />
+    <span [id]="id" class="slds-checkbox_faux_container" aria-live="assertive">
+      <span class="slds-checkbox_faux"></span>
+      <span class="slds-checkbox_on">{{on}}</span>
+      <span class="slds-checkbox_off">{{off}}</span>
+    </span>
+  </label>
+</div>

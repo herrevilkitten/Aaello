@@ -1,0 +1,6 @@
+<li class="slds-accordion__list-item">
+  <section class="slds-accordion__section" [ngClass]="{'slds-is-open': isOpen}">
+    <ng-content select="ld-accordion-item-summary"></ng-content>
+    <ng-content select="ld-accordion-item-content"></ng-content>
+  </section>
+</li>

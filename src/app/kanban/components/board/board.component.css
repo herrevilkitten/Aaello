@@ -1,0 +1,25 @@
+.kanban-board {
+  height: 100%;
+}
+
+.kanban-board-title {
+  font-size: 2em;
+}
+
+.kanban-board-content {
+  /*
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  */
+}
+
+.kanban-board-list {}
+
+.kanban-board button[mat-button] {
+  flex-grow: 0;
+}
+
+.slds-card__body {
+  height: calc(100% - 75px);
+}

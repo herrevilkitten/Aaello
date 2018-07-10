@@ -1,0 +1,8 @@
+<div class="slds-form-element">
+  <label class="slds-form-element__label" for="{{id}}">
+    <abbr *ngIf="required" class="slds-required" title="required">*</abbr>{{label}}</label>
+  <div class="slds-form-element__control">
+    <input [attr.disabled]="disabled ? 'disabled' : null" [attr.readonly]="readonly ? 'readonly' : null" type="text" id="{{id}}"
+      class="slds-input" [class.slds-input_bare]="bare" [class.slds-input_counter]="counter" [placeholder]="placeholder" #ldInput />
+  </div>
+</div>

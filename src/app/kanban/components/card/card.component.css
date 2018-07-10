@@ -1,0 +1,10 @@
+.slds-card {
+  border-radius: 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.slds-card__body {
+  max-height: 200px;
+  overflow: auto;
+}

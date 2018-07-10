@@ -1,0 +1,6 @@
+<span [ngClass]="containerClass" [title]="title">
+  <svg aria-hidden="true" class="slds-icon" [ngClass]="iconClass" [title]="title">
+    <use [attr.xlink:href]="iconLink"></use>
+  </svg>
+  <span *ngIf="title != ''" class="slds-assistive-text">{{title}}/span>
+  </span>

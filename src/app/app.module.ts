@@ -1,14 +1,49 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { RouterModule, Routes } from '@angular/router';
+
+import { KanbanModule } from './kanban/kanban.module';
+
 import { AppComponent } from './app.component';
+
+import { BoardComponent } from './components/board/board.component';
+import { HomeComponent } from './components/home/home.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+
+const appRoutes: Routes = [
+  {
+    path: 'board/:id',
+    component: BoardComponent,
+  },
+  {
+    path: '',
+    component: HomeComponent,
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent,
+  },
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BoardComponent,
+    HomeComponent,
+    PageNotFoundComponent
   ],
   imports: [
-    BrowserModule
+    BrowserAnimationsModule,
+    BrowserModule,
+    KanbanModule,
+    RouterModule.forRoot(
+      appRoutes,
+      {
+        enableTracing: true,
+      },
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
